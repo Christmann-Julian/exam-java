@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Motivant</title>
+</head>
+<body>
+    <h1>Chatbot Motivant</h1>
+
+    <form action="/send" method="post">
+        <input type="text" name="userName" placeholder="Votre nom" required>
+        <input type="text" name="userMessage" placeholder="Votre message" required>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <p><strong>Réponse :</strong> <span th:text="${response}"></span></p>
+
+    <a href="/users">Voir tous les utilisateurs</a>
+</body>
+</html>
