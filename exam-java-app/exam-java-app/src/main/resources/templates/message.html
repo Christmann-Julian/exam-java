@@ -3,18 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatbot Motivant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Chatbot Motivant</h1>
+<h1>Chatbot Motivant</h1>
 
-    <form action="/send" method="post">
-        <input type="text" name="userName" placeholder="Votre nom" required>
-        <input type="text" name="userMessage" placeholder="Votre message" required>
-        <button type="submit">Envoyer</button>
-    </form>
+<form action="/send" method="post">
+    <input type="text" name="userName" placeholder="Votre nom" required>
+    <input type="text" name="userMessage" placeholder="Votre message" required>
+    <button type="submit">Envoyer</button>
+</form>
 
-    <p><strong>Réponse :</strong> <span th:text="${response}"></span></p>
+<p><strong>Réponse :</strong> <span th:text="${response}"></span></p>
 
-    <a href="/users">Voir tous les utilisateurs</a>
+<a href="/users">Voir tous les utilisateurs</a>
 </body>
 </html>
